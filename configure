@@ -146,7 +146,7 @@ if [ -z "$brodist" ]; then
         else
             brodist=`bro-config --bro_dist 2> /dev/null`
 
-            if [ ! -e "$brodist/bro-path-dev.in" ]; then
+            if [ ! -e "$brodist/zeek-path-dev.in" ]; then
                 echo "$brodist does not appear to be a valid Zeek source tree."
                 exit 1
             fi
@@ -159,7 +159,7 @@ if [ -z "$brodist" ]; then
         exit 1
     fi
 else
-    if [ ! -e "$brodist/bro-path-dev.in" ]; then
+    if [ ! -e "$brodist/zeek-path-dev.in" ]; then
       echo "$brodist does not appear to be a valid Zeek source tree."
       exit 1
     fi
